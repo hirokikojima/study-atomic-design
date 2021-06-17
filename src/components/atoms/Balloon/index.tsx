@@ -1,7 +1,7 @@
 import React, { FC, HTMLProps, PropsWithChildren } from 'react'
 import styles from 'assets/scss/style.module.scss'
 
-type Props = PropsWithChildren<HTMLProps<HTMLSpanElement>>
+export type Props = PropsWithChildren<HTMLProps<HTMLSpanElement>>
 
 const Balloon: FC<Props> = (props: Props) => {
   const {
