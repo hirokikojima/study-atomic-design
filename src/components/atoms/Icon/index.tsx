@@ -37,6 +37,7 @@ const Icon: FC<PropsWithIconName> = (props: PropsWithIconName) => {
   return (
     <img
       src={`/img/icons/${ iconName }.svg`}
+      onClick={ onClick }
       { ...newProps }
     />
   )
