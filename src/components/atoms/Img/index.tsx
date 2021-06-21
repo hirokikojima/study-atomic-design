@@ -8,7 +8,6 @@ const Img: FC<Props> = (props: Props) => {
   const rest = {
     ...props,
     crossOrigin: props.crossOrigin as crossOriginType
-    
   }
 
   return <img {...rest} />
