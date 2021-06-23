@@ -1,3 +1,4 @@
+import 'modern-css-reset/dist/reset.min.css'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
