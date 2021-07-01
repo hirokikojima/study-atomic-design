@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import { TrashCanIcon } from 'components/atoms/Icon'
 import Balloon from 'components/atoms/Balloon'
 import classNames from "classnames";
+import HoverTipInteraction, { Tip } from "components/atoms/HoverTipInteraction";
 
 export type Props = {
   onClick: () => void
@@ -16,10 +17,10 @@ const DeleteButton: FC<Props> = (props: Props) => {
   } = props
   
   return (
-    <span className={ classNames([styles.root, className]) } { ...rest }>
+    <HoverTipInteraction className={ classNames([styles.root, className]) } { ...rest }>
       <TrashCanIcon onClick={ onClick } />
-      <Balloon>削除する</Balloon>
-    </span>
+      <Tip><Balloon>削除する</Balloon></Tip>
+    </HoverTipInteraction>
   )
 }
 
