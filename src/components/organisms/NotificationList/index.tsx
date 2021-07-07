@@ -5,7 +5,7 @@ import { Program } from "types";
 
 export type Props = {
   programs: Program[]
-  onClickDelete: () => void
+  onClickDelete: (program: Program) => void
 }
 
 const NotificationList: FC<Props> = (props: Props) => {
@@ -22,7 +22,7 @@ const NotificationList: FC<Props> = (props: Props) => {
             key={program.id}
             className={ styles.item }
             program={program}
-            onClickDelete={onClickDelete}
+            onClickDelete={() => onClickDelete(program)}
           />
         ))
       }
